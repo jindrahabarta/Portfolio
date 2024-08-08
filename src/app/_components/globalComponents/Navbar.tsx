@@ -1,19 +1,27 @@
 'use client'
 import Lenis from 'lenis'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import useAnimation from '@/app/_utils/useAnimation'
+import useMobileMenu from '@/app/_utils/useMobileMenu'
 import Link from 'next/link'
 import Plus from '@/app/_icons/Plus'
 
 const Navbar = () => {
+    const path = usePathname()
     const links = [
         { link: '/', text: 'Home' },
         { link: 'about', text: 'About' },
         { link: 'projects', text: 'Projects' },
+        { link: '#footer', text: 'Contact' },
     ]
 
     const [isOpened, setIsOpened] = useState(false)
+
+    const openMenu = () => {
+        setIsOpened((prev) => !prev)
+        useMobileMenu(isOpened)
+    }
 
     useEffect(() => {
         //Inicializace lenisu
@@ -24,8 +32,8 @@ const Navbar = () => {
         }
         requestAnimationFrame(raf)
 
-        useAnimation()
-    }, [])
+        useAnimation(path)
+    }, [path])
 
     const router = useRouter()
     const [isLoading, setIsLoading] = useState(false)
@@ -39,27 +47,14 @@ const Navbar = () => {
         }, 1500)
     }
     return (
-        // <nav
-        //     className={`fixed top-0 right-0 rounded-bl-full bg-darkPink duration-200 z-50 ${
-        //         isOpened ? 'w-96 h-96' : 'w-0 h-0'
-        //     }  `}
-        // >
-        //     <button
-        //         className="absolute top-4 right-4"
-        //         onClick={(prev) => {
-        //             setIsOpened((prev) => !prev), console.log(isOpened)
-        //         }}
-        //     >
-        //         <Hamburger />
-        //     </button>
-        // </nav>
-        <nav className="w-full fixed top-2 flex flex-col justify-end px-4">
-            <div className="bg-midBlue2 h-0.5"></div>
-            <div className="flex justify-between overflow-hidden">
-                <div className="flex gap-32">
+        <nav className="w-full fixed top-0 flex flex-col justify-end px-4 z-50">
+            <div className="bg-midBlue2 h-0.5 mt-2 z-50"></div>
+            <div className="flex justify-between overflow-hidden z-50">
+                <div className="flex items-center gap-32">
                     {links.map(
                         (link: { link: string; text: string }, i: number) => (
                             <Link
+                                key={i}
                                 href={link.link}
                                 className="hidden md:block darkBlueText hover:text-lightBlue duration-200 navLi opacity-0"
                             >
@@ -82,10 +77,8 @@ const Navbar = () => {
                         Download CV
                     </Link>
                     <button
-                        className="w-fit h-fit block md:hidden"
-                        onClick={(prev) => {
-                            setIsOpened((prev) => !prev)
-                        }}
+                        className="w-fit h-fit block md:hidden z-50 navLi opacity-0"
+                        onClick={openMenu}
                     >
                         <Plus
                             className={`w-6 stroke-midBlue2 hover:stroke-lightBlue duration-200 align-middle ${
@@ -93,6 +86,28 @@ const Navbar = () => {
                             }`}
                         ></Plus>
                     </button>
+                </div>
+            </div>
+
+            {/* Mobile Nav */}
+            <div
+                className={`px-4 py-32 block md:hidden absolute top-0 left-0 w-full h-screen backdrop-blur-md bg-[radial-gradient(169.40%_89.55%_at_94.76%_6.29%,rgba(0,0,0,0.40)_0%,rgba(255,255,255,0.00)_100%)]  z-40 duration-200 mobileMenu opacity-0 ${
+                    !isOpened && 'pointer-events-none'
+                }`}
+            >
+                <div className="w-full h-full flex flex-col justify-between">
+                    {links.map(
+                        (link: { link: string; text: string }, i: number) => (
+                            <Link
+                                onClick={openMenu}
+                                key={i}
+                                href={link.link}
+                                className="block darkBlueText hover:text-lightBlue duration-200 mobileNavLi opacity-0"
+                            >
+                                {link.text}
+                            </Link>
+                        )
+                    )}
                 </div>
             </div>
         </nav>

@@ -16,18 +16,29 @@
     height: 100%;
     overflow: hidden;
 }
-/* .offScroll {
-    position: fixed;
-} */
 
 .darkBlueText,
 .lightBlueText {
     color: #5d8eff;
-    font-size: 1rem;
-    line-height: 1.75rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
     text-transform: uppercase;
     font-weight: 500;
 }
+
 .lightBlueText {
     color: #acc9ff;
+}
+.darkBlueText {
+    color: #5d8eff;
+}
+
+@media (min-width: 400px) {
+    .darkBlueText,
+    .lightBlueText {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
 }

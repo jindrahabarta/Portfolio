@@ -102,9 +102,9 @@ const Bio = () => {
             <div className="md:flex md:gap-44 lg:gap-96">
                 <p className="darkBlueText ">Bio</p>
                 <div>
-                    <p className="flex-grow text-5xl font-medium">
+                    <p className="flex-grow text-xl sm:text-3xl md:text-5xl font-medium">
                         {bio.map((word: string, i: number) => (
-                            <span className="bio-span opacity-40" key={i}>
+                            <span className="bio-span opacity-50" key={i}>
                                 {word}{' '}
                             </span>
                         ))}

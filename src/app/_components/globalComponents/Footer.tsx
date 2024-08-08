@@ -5,11 +5,11 @@ import Arrow from '@/app/_icons/Arrow'
 const Footer = () => {
     return (
         <footer
-            className="h-screen flex flex-col items-center justify-between bg-darkBlue"
+            className="h-screen flex flex-col items-center justify-between bg-darkBlue pt-14"
             id="footer"
         >
             <div
-                className="bg-darkPink h-[70vh] p-10 pb-0 w-full flex flex-col items-center justify-between break-all"
+                className="bg-darkPink h-[70vh] p-6 sm:p-10 pb-0 sm:pb-0 w-full flex flex-col items-center justify-between break-all"
                 id="footer-top"
             >
                 <a
@@ -17,18 +17,18 @@ const Footer = () => {
                     className={`px-10 py-2 w-fit rounded-3xl hover:cursor-pointer duration-200 group
                     bg-darkBlue hover:bg-darkBlue`}
                 >
-                    <p className="text-darkPink duration-200 font-bold">
+                    <p className="text-darkPink duration-200 font-bold text-sm">
                         Contact me
                     </p>
                 </a>
 
                 <a
                     href="mailto:jindriskuv@email.cz"
-                    className=" text-darkBlue hover:text-lightBlue duration-300 text-5xl break-words font-bold"
+                    className=" text-darkBlue hover:text-lightBlue duration-300 text-3xl sm:text-5xl break-words font-bold"
                 >
                     jindriskuv@email.cz
                 </a>
-                <div className="flex gap-10">
+                <div className="flex gap-4 sm:gap-10">
                     <a
                         target="_blank"
                         href="https://www.instagram.com/jindrahabarta"
@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="w-full h-[20vh] bg-darkPink flex items-end justify-center text-xs p-2">
+            <div className="w-full h-[15vh] bg-darkPink flex items-end justify-center text-xs p-2">
                 <p className=" text-darkBlue">© 2024 JINDRICH HABARTA</p>
             </div>
         </footer>

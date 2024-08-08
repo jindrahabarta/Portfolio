@@ -1,7 +1,7 @@
 import React from 'react'
 
 const page = () => {
-    return <div className="h-[200vh]">Test page</div>
+    return <main className="h-screen"> aboutme</main>
 }
 
 export default page

@@ -1,20 +1,17 @@
 'use client'
 import React from 'react'
 import Card from './Card'
-import Hamburger from '@/app/_icons/Hamburger'
-import { useLenis } from 'lenis/dist/lenis-react.js'
 import Tag from '../globalComponents/Tag'
 
 const Projects = () => {
-    // const lenis = useLenis()
     return (
-        <section className="h-[400vh] relative mt-28" id="projectsContainer">
-            <div className="h-screen sticky top-0 left-0 ">
+        <section className="h-[400vh] relative mt-28 " id="projectsContainer">
+            <div className="sticky top-0 left-0">
                 <div className="overflow-x-hidden">
                     <div className=" w-fit h-screen flex" id="sliderBlock">
                         <Card name="project1">
                             <Tag color="yellow" type="tag" text="dev" />
-                            <Tag type="tag" text="xd" />
+                            <Tag color="green" type="tag" text="xd" />
                             <Tag type="tag" text="run" />
                         </Card>
 

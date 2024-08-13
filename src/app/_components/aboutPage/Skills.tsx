@@ -58,7 +58,7 @@ const Skills = () => {
     ]
 
     return (
-        <section className="mt-10 flex flex-col md:grid grid-cols-5 grid-rows-4 gap-4 px-4 md:px-20 ">
+        <section className="mt-10 flex flex-col md:grid md:grid-cols-5 md:grid-rows-4 gap-4 px-4 md:px-20 ">
             <SkillBox cols={2} rows={2} square>
                 <h2 className="text-darkBlue text-xl font-bold underline">
                     Dovednosti:
@@ -167,7 +167,7 @@ const Skills = () => {
             </SkillBox>
 
             <div
-                className={`p-4 bg-lightBlue rounded-xl  md:col-span-3 lg:col-span-1`}
+                className={`p-4 bg-lightBlue rounded-xl  md:col-span-3 lg:col-span-2`}
             >
                 <h2 className="text-darkBlue text-xl duration-200 font-bold underline">
                     Sociální sítě:
@@ -221,6 +221,11 @@ const Skills = () => {
                     </a>
                 </div>
             </div>
+            {/* <div className=" col-span-2 row-span-2  bg-lightBlue"></div> */}
+            {/* <div className=" col-span-3 row-span-3 bg-lightBlue"></div> */}
+            {/* <div className=" col-span-2 row-span-2 aspect-square  bg-lightBlue"></div> */}
+            {/* <div className=" col-span-2 row-span-1  bg-lightBlue"></div> */}
+            {/* <div className=" col-span-1 row-span-1  bg-lightBlue"></div> */}
         </section>
     )
 }

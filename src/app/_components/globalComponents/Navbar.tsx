@@ -20,11 +20,8 @@ const Navbar = () => {
 
     const openMenu = () => {
         setIsOpened((prev) => !prev)
-        useMobileMenu(isOpened)
+        useMobileMenu(!isOpened)
     }
-    useEffect(() => {
-        useMobileMenu(isOpened)
-    }, [isOpened])
 
     useEffect(() => {
         //Inicializace lenisu

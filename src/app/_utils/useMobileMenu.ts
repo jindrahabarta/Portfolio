@@ -29,7 +29,7 @@ const useMobileMenu = (isOpened: boolean) => {
             }
         )
 
-    if (!isOpened) {
+    if (isOpened) {
         menuTl.play()
     } else {
         menuTl.reverse()

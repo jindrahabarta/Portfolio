@@ -4,7 +4,7 @@ import AboutMeImg from '../../../../public/images/aboutme.png'
 
 const AboutMe = () => {
     return (
-        <section className="flex md:flex-row flex-col h-screen justify-center items-center ">
+        <section className="flex md:flex-row flex-col h-screen justify-center items-center px-4 md:px-20 ">
             <div className="flex-3">
                 <Image
                     src={AboutMeImg}
@@ -15,11 +15,11 @@ const AboutMe = () => {
             </div>
 
             <p className="flex-5 text-xl sm:text-2xl md:text-3xl font-medium">
-                Hi, <br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                officiis aut aliquid. Id temporibus esse nihil veritatis enim a,
-                molestiae facilis, pariatur, officia quos odio atque earum
-                adipisci laborum nobis.
+                Ahoj, <br />
+                jsem absolventem IT oboru Střední průmyslové školy v Šumperku.
+                Na tomto oboru mě nejvíce zaujala tvorba webů a aplikací nebo
+                činnosti okolo multimédií. Proto bych se chtěl v této aktivitě
+                zdokonalovat i nadále.
             </p>
         </section>
     )

@@ -6,7 +6,7 @@ const useScrollTrigger = (path) => {
     gsap.registerPlugin(ScrollTrigger)
 
     let mm = gsap.matchMedia()
-
+    console.log(path)
     if (path === '/') {
         //HERO
         gsap.to('.heroText', {
@@ -62,29 +62,28 @@ const useScrollTrigger = (path) => {
             })
         })
 
+        // mm.add('(min-width: 768px)', () => {
+        //     const projectsBgTl = gsap.timeline({
+        //         scrollTrigger: {
+        //             trigger: '#projectsContainer',
+        //             start: '20% top',
+        //             end: 'bottom bottom',
+        //             scrub: true,
+        //         },
+        //     })
+        //     projectsBgTl
+        //         .to('#body', {
+        //             background: '#15e499',
+        //         })
+        //         .to('#body', {
+        //             background: '#bd7bff',
+        //         })
+        //         .to('#body', {
+        //             background: '#1000FF',
+        //         })
+        // })
+
         //Projects - sidescroll
-
-        mm.add('(min-width: 768px)', () => {
-            const projectsBgTl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: '#projectsContainer',
-                    start: '20% top',
-                    end: 'bottom bottom',
-                    scrub: true,
-                },
-            })
-            projectsBgTl
-                .to('#body', {
-                    background: '#15e499',
-                })
-                .to('#body', {
-                    background: '#bd7bff',
-                })
-                .to('#body', {
-                    background: '#1000FF',
-                })
-        })
-
         mm.add('(min-width: 768px)', () => {
             ScrollTrigger.create({
                 trigger: '#projectsContainer',

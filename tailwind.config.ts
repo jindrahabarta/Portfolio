@@ -30,6 +30,9 @@ const config: Config = {
                 '3': '3 3 0%',
                 '5': '5 5 0%',
             },
+            gridTemplateColumns: {
+                fluid: 'repeat(auto-fit, minmax(12rem, 1fr))',
+            },
         },
     },
     plugins: [],

@@ -1,0 +1,228 @@
+import React from 'react'
+import SkillBox from './SkillBox'
+import Link from 'next/link'
+import Firebase from '@/app/about/_icons/Firebase'
+import HTML from '@/app/about/_icons/HTML'
+import CSS from '@/app/about/_icons/CSS'
+import ReactIco from '@/app/about/_icons/ReactIco'
+import JS from '@/app/about/_icons/JS'
+import Next from '@/app/about/_icons/Next'
+import Tailwind from '@/app/about/_icons/Tailwind'
+import Illustrator from '@/app/about/_icons/Illustrator'
+import GSAP from '@/app/about/_icons/GSAP'
+import Photoshop from '@/app/about/_icons/Photoshop'
+import AE from '@/app/about/_icons/AE'
+
+const Skills = () => {
+    const icons: { href: string; ico: React.ReactElement }[] = [
+        {
+            href: '',
+            ico: <HTML></HTML>,
+        },
+        {
+            href: '',
+            ico: <CSS></CSS>,
+        },
+        {
+            href: '',
+            ico: <JS></JS>,
+        },
+        {
+            href: '',
+            ico: <ReactIco></ReactIco>,
+        },
+        {
+            href: '',
+            ico: <Next></Next>,
+        },
+        {
+            href: '',
+            ico: <Tailwind></Tailwind>,
+        },
+        {
+            href: '',
+            ico: <Firebase></Firebase>,
+        },
+        {
+            href: '',
+            ico: <Illustrator></Illustrator>,
+        },
+        {
+            href: '',
+            ico: <Photoshop></Photoshop>,
+        },
+        {
+            href: '',
+            ico: <AE></AE>,
+        },
+    ]
+
+    return (
+        <section className="mt-10 flex flex-col md:grid grid-cols-5 grid-rows-4 gap-4 px-4 md:px-20 ">
+            <SkillBox cols={2} rows={2} square>
+                <h2 className="text-darkBlue text-xl font-bold underline">
+                    Dovednosti:
+                </h2>
+                <div className="grid grid-cols-6  gap-3 mt-2">
+                    {icons.map((ico, i) => (
+                        <Link
+                            href={ico.href}
+                            key={i}
+                            className="w-full h-full rounded-lg bg-[#9cbfff] p-1 hover:cursor-pointer duration-200 bg-opacity-0 hover:bg-opacity-100"
+                        >
+                            {ico.ico}
+                        </Link>
+                    ))}
+                </div>
+            </SkillBox>
+
+            <SkillBox cols={3} rows={3}>
+                <h2 className="text-darkBlue text-xl  font-bold underline">
+                    O mně:
+                </h2>
+                <br />
+                <h3 className="text-darkBlue font-bold ">Vzdělání</h3>
+                <br />
+                <h4 className="text-darkBlue text-sm">2019 - 2024</h4>
+                <p className="text-darkBlue">
+                    <a
+                        href="https://www.vsps-su.cz/"
+                        target="_blank"
+                        className="text-darkBlue font-bold"
+                    >
+                        VOŠ a SPŠ Šumperk
+                    </a>
+                    - obor Informační Technologie
+                </p>
+                <br />
+
+                <h4 className="text-darkBlue text-sm">2009 - 2018</h4>
+                <p className="text-darkBlue">
+                    <a
+                        href="https://www.cvvoda.cz/"
+                        target="_blank"
+                        className="text-darkBlue font-bold"
+                    >
+                        ZŠ Červená Voda
+                    </a>
+                </p>
+                <br />
+                <h3 className="text-darkBlue font-bold ">Zkušenosti</h3>
+                <br />
+                <ul>
+                    <li>
+                        <p className="text-darkBlue">
+                            <span className="text-darkBlue font-bold">
+                                HTML a CSS
+                            </span>{' '}
+                            - 5 let
+                        </p>
+                    </li>
+                    <li>
+                        <p className="text-darkBlue">
+                            <span className="text-darkBlue font-bold">
+                                Next.js
+                            </span>{' '}
+                            - 5 měsíců
+                        </p>
+                    </li>
+                </ul>
+
+                <br />
+                <h3 className="text-darkBlue font-bold ">Volný čas</h3>
+                <br />
+                <p className="text-darkBlue">
+                    Jsem sportovně založený člověk s pozitivním nastavením
+                    mysli. Pokud mě práce baví a dává mi smysl, nemám problém u
+                    ní trávit hodiny volného času. Jako můj hlavní koníček
+                    považuji výrobu designových koberečků na zakázku. Volný čas
+                    rád trávím jakoukoli sportovní aktivitou nebo s přáteli.
+                </p>
+            </SkillBox>
+
+            <SkillBox cols={2} rows={2} square>
+                <h2 className="text-darkBlue text-xl font-bold underline">
+                    Softskills:
+                </h2>
+                <br />
+                <ul>
+                    <li>
+                        <p className="text-darkBlue">- Angličtina (B2)</p>
+                    </li>
+                    <li>
+                        <p className="text-darkBlue">- Kreativita</p>
+                    </li>
+                    <li>
+                        <p className="text-darkBlue">- Zodpovědnost</p>
+                    </li>
+                    <li>
+                        <p className="text-darkBlue">- Pracovní nasazení</p>
+                    </li>
+                    <li>
+                        <p className="text-darkBlue">
+                            - Správa sociálních sítí
+                        </p>
+                    </li>
+                </ul>
+            </SkillBox>
+
+            <div
+                className={`p-4 bg-lightBlue rounded-xl  md:col-span-3 lg:col-span-1`}
+            >
+                <h2 className="text-darkBlue text-xl duration-200 font-bold underline">
+                    Sociální sítě:
+                </h2>
+                <div className="mt-2 h-full flex flex-col gap-2">
+                    <a
+                        className="text-midBlue2 hover:text-midBlue text-xl duration-200 font-bold"
+                        href=""
+                    >
+                        Instagram
+                    </a>
+                    <a
+                        className="text-midBlue2 hover:text-midBlue text-xl duration-200 font-bold"
+                        href=""
+                    >
+                        Facebook
+                    </a>
+                    <a
+                        className="text-midBlue2 hover:text-midBlue text-xl duration-200 font-bold"
+                        href=""
+                    >
+                        Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div
+                className={`p-4 bg-lightBlue rounded-xl col-span-1 row-span-1 hidden lg:block`}
+            >
+                <h2 className="text-darkBlue text-xl duration-200 font-bold underline">
+                    Kontakt:
+                </h2>
+                <div className="mt-2 h-full flex flex-col gap-2">
+                    <a
+                        className="text-midBlue2 hover:text-midBlue text-xl duration-200 font-bold"
+                        href="mailto:jindriskuv@email.cz"
+                    >
+                        Email
+                    </a>
+                    <a
+                        className="text-midBlue2 hover:text-midBlue text-xl duration-200 font-bold"
+                        href="tel:775180052"
+                    >
+                        Telefon
+                    </a>
+                    <a
+                        className="text-midBlue2 hover:text-midBlue text-xl duration-200 font-bold"
+                        href="tel:775180052"
+                    >
+                        CV
+                    </a>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default Skills

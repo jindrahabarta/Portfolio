@@ -5,10 +5,16 @@ import Tag from '../globalComponents/Tag'
 
 const Projects = () => {
     return (
-        <section className="h-[400vh] relative mt-28 " id="projectsContainer">
-            <div className="sticky top-0 left-0">
+        <section
+            className="h-fit md:h-[400vh] relative mt-28 px-4 md:px-0 "
+            id="projectsContainer"
+        >
+            <div className="relative md:sticky top-0 left-0">
                 <div className="overflow-x-hidden">
-                    <div className=" w-fit h-screen flex" id="sliderBlock">
+                    <div
+                        className="w-full md:w-[300%] md:h-screen flex flex-col gap-4 md:gap-0 md:flex-row"
+                        id="sliderBlock"
+                    >
                         <Card name="project1">
                             <Tag color="yellow" type="tag" text="dev" />
                             <Tag color="green" type="tag" text="xd" />
@@ -21,9 +27,6 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full h-screen bg-red-500" id="projects2"></div>
-            <div className="w-full h-screen bg-blue-400" id="projects3"></div>
-            <div className="w-full h-screen bg-green" id="projects4"></div>
         </section>
     )
 }

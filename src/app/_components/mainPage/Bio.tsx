@@ -109,7 +109,7 @@ const Bio = () => {
                             </span>
                         ))}
                     </p>
-                    <Link href="#">
+                    <Link href="about">
                         <Tag
                             type="projectname"
                             text="About me"

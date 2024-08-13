@@ -30,10 +30,15 @@ export default function RootLayout({
             lang="en"
             className=" scroll-smooth overflow-x-hidden bg-darkBlue"
         >
-            <body className={`${poppins.variable} ${arbutus_slab.variable}`}>
-                <Navbar />
-                {children}
-                <Footer />
+            <body
+                className={`${poppins.variable} ${arbutus_slab.variable} flex justify-center`}
+                id="body"
+            >
+                <div className="w-full max-w-[1920px]">
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </div>
             </body>
         </html>
     )

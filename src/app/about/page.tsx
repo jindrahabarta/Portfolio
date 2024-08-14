@@ -5,7 +5,7 @@ import Skills from '../_components/aboutPage/Skills'
 
 const page = () => {
     return (
-        <main className="">
+        <main>
             <AboutMe></AboutMe>
 
             <Skills></Skills>

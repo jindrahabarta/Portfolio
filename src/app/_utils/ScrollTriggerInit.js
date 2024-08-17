@@ -43,24 +43,24 @@ const ScrollTriggerInit = (path) => {
                 scrub: 0.1,
 
                 onEnter: () => {
-                    gsap.to(span, { opacity: 1, duration: 0.1 })
+                    gsap.to(span, { opacity: 1, duration: 0.2 })
                 },
                 onEnterBack: () => {
                     gsap.to(span, {
                         opacity: 1,
-                        duration: 0.1,
+                        duration: 0.2,
                     })
                 },
                 onLeaveBack: () => {
                     gsap.to(span, {
                         opacity: 0.5,
-                        duration: 0.1,
+                        duration: 0.2,
                     })
                 },
                 onLeave: () => {
                     gsap.to(span, {
                         opacity: 0.5,
-                        duration: 0.1,
+                        duration: 0.2,
                     })
                 },
             })

@@ -11,6 +11,7 @@ const AboutMe = () => {
                     width={500}
                     height={500}
                     alt="About Me Image"
+                    priority={true}
                 ></Image>
             </div>
 

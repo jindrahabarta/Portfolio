@@ -2,7 +2,6 @@
 import React from 'react'
 import Card from './Card'
 import Tag from '../globalComponents/Tag'
-import { ReactFitty } from 'react-fitty'
 
 const cards = [
     {

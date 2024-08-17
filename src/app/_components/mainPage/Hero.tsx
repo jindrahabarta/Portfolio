@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { ReactFitty } from 'react-fitty'
 
 const Hero = () => {
     return (
@@ -35,9 +34,9 @@ const Hero = () => {
                 </div>
             </div>
 
-            <ReactFitty className="font-bold text-center text-darkPink leading-none  heroText opacity-0">
+            <h1 className="font-bold text-center text-darkPink leading-none  text-[22vw] indent-[-2.8%] heroText opacity-0">
                 Portfolio
-            </ReactFitty>
+            </h1>
         </section>
     )
 }

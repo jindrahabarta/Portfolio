@@ -40,66 +40,72 @@ const useScrollTrigger = (path) => {
                 trigger: span,
                 start: 'top 30%',
                 end: 'bottom 30%',
-                scrub: true,
+                scrub: 0.1,
+
                 onEnter: () => {
-                    gsap.to(span, { opacity: 1 })
+                    gsap.to(span, { opacity: 1, duration: 0.1 })
                 },
                 onEnterBack: () => {
                     gsap.to(span, {
                         opacity: 1,
+                        duration: 0.1,
                     })
                 },
                 onLeaveBack: () => {
                     gsap.to(span, {
                         opacity: 0.5,
+                        duration: 0.1,
                     })
                 },
                 onLeave: () => {
                     gsap.to(span, {
                         opacity: 0.5,
+                        duration: 0.1,
                     })
                 },
             })
         })
 
-        // mm.add('(min-width: 768px)', () => {
-        //     const projectsBgTl = gsap.timeline({
-        //         scrollTrigger: {
-        //             trigger: '#projectsContainer',
-        //             start: '20% top',
-        //             end: 'bottom bottom',
-        //             scrub: true,
-        //         },
-        //     })
-        //     projectsBgTl
-        //         .to('#body', {
-        //             background: '#15e499',
-        //         })
-        //         .to('#body', {
-        //             background: '#bd7bff',
-        //         })
-        //         .to('#body', {
-        //             background: '#1000FF',
-        //         })
-        // })
+        const projectsTl = gsap.timeline()
 
-        //Projects - sidescroll
         mm.add('(min-width: 768px)', () => {
-            ScrollTrigger.create({
-                trigger: '#projectsContainer',
-                start: 'top top',
-                end: 'bottom bottom',
-                scrub: true,
+            ScrollTrigger.create(
+                {
+                    trigger: '#projectsContainer',
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    scrub: true,
+                    snap: {
+                        snapTo: 0.25,
+                        duration: 0.25,
+                        delay: 0,
+                        ease: 'power1.inOut',
+                    },
 
-                onUpdate: (self) => {
-                    const x = self.progress * -100
-                    gsap.to('#sliderBlock', {
-                        translateX: x + '%',
-                    })
+                    onUpdate: (self) => {
+                        const x = self.progress * -100
+                        const y = self.progress * 100
+                        gsap.to('#sliderBlock', {
+                            translateX: x + '%',
+                        })
+                        gsap.to('.projectsText', {
+                            translateX: y - 5 + '%',
+                        })
+                    },
                 },
-            })
+                projectsTl.to('.projectsText', {
+                    opacity: 0.25,
+                })
+            )
         })
     }
+
+    // gsap.to(".div", {
+    //     scrollTrigger:{
+    //         scroller: "#projectsContainer",
+    //         trigger: ".section-02",
+    //     }
+    // })
 
     //FOOTER
 
@@ -109,7 +115,6 @@ const useScrollTrigger = (path) => {
                 trigger: '#footer',
                 start: 'top bottom',
                 end: 'bottom bottom',
-
                 scrub: true,
             },
             width: 80 + '%',

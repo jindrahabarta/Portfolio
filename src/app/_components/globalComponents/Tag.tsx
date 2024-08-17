@@ -15,9 +15,11 @@ const Tag = ({
         return (
             <div
                 className={`${className} w-fit px-4 py-1 rounded-3xl hover:cursor-pointer duration-200
-                 ${!color && ' bg-gray-500 hover:bg-red-400'}
-                ${color === 'yellow' && 'bg-yellow hover:bg-red-400'}
-                 ${color === 'green' && 'bg-green hover:bg-red-400'}
+                 ${!color && 'bg-gray-500 hover:bg-gray-400 '}
+                ${color === 'yellow' && 'bg-yellow hover:bg-[#fced0f]'}
+                 ${color === 'green' && 'bg-green hover:bg-[#2ae871]'}
+                  ${color === 'violet' && 'bg-violet-500 hover:bg-[#9b72f7]'}
+                   ${color === 'blue' && 'bg-darkBlue hover:bg-midBlue'}
               `}
             >
                 <p className="text-white text-sm">{text}</p>

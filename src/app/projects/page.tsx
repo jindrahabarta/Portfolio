@@ -1,8 +1,11 @@
 'use client'
 import React, { useState } from 'react'
 import MenuButton from '../_components/projectsPage/MenuButton'
-import JapanBg from '@/../public/images/japanesebg.jpg'
-import Japan2 from '@/../public/images/japan2.jpeg'
+import blog from '@/../public/images/project/blog.jpg'
+import facebookv2 from '@/../public/images/project/facebookv2.jpg'
+import gsap from '@/../public/images/project/gsap.jpg'
+import helenpottery from '@/../public/images/project/helenpottery.jpg'
+import minigames from '@/../public/images/project/minigames.jpg'
 import ProjectCard from '../_components/projectsPage/ProjectCard'
 import './style.css'
 import { StaticImageData } from 'next/image'
@@ -11,38 +14,43 @@ const projects: {
     name: string
     img: StaticImageData
     tech: string
+    link: string
 }[] = [
     {
-        name: 'Project1',
-        img: Japan2,
-        tech: 'wp next',
+        name: 'Minigames',
+        img: minigames,
+        tech: 'next',
+        link: 'minigames',
+    },
+
+    {
+        name: 'Helenpottery',
+        img: helenpottery,
+        tech: 'wp',
+        link: 'https://www.helenpottery.cz/',
     },
     {
-        name: 'Project2',
-        img: JapanBg,
+        name: 'Blog',
+        img: blog,
         tech: 'next',
+        link: 'blog',
     },
     {
-        name: 'Project2',
-        img: JapanBg,
+        name: 'Facebook v2.0',
+        img: facebookv2,
         tech: 'next',
+        link: 'facebook',
+    },
+    {
+        name: 'GSAP',
+        img: gsap,
+        tech: 'next',
+        link: 'xdxd',
     },
 ]
 
 const page = () => {
     const [selectedBtn, setSelectedBtn] = useState('all')
-
-    // const btns: any = []
-
-    // projects.forEach((project: any) => {
-    //     if (!btns.includes(project.tech)) {
-    //         projects.push(project)
-    //     }
-    // })
-
-    // const btns = projects
-    //     .map((item) => item)
-    //     .filter((value, index, current) => current.indexOf(value) === index)
 
     const find = (tech: string, e: any) => {
         const cards = document.getElementsByClassName('projectCard')
@@ -53,32 +61,25 @@ const page = () => {
             if (tech === 'all') {
                 cards[i].classList.remove('cardShow')
                 cards[i].classList.remove('cardHide')
+                cards[i].classList.add('cardShow')
             } else {
-                cards[i].classList.remove('cardShow')
-                cards[i].classList.remove('cardHide')
                 if (cards[i].classList.contains(tech)) {
                     cards[i].classList.add('cardShow')
+                    cards[i].classList.remove('cardHide')
                 } else {
                     cards[i].classList.add('cardHide')
+                    cards[i].classList.remove('cardShow')
                 }
             }
         }
     }
 
+    const { tech }: any = projects && projects
+    console.log(tech)
+
     return (
         <main className="p-4 mt-32 px-4">
             <section className="flex gap-4">
-                {/* {btns.map((btn: any, i: number) => (
-                    <React.Fragment key={btn.tech}>
-                        <MenuButton
-                            isSelected={selectedBtn}
-                            id={btn.tech}
-                            handleClick={(e: any) => find(btn.tech, e)}
-                        >
-                            {btn.btn}
-                        </MenuButton>
-                    </React.Fragment>
-                ))} */}
                 <MenuButton
                     isSelected={selectedBtn}
                     id="all"
@@ -102,7 +103,8 @@ const page = () => {
                 </MenuButton>
             </section>
 
-            <section className="mt-4 grid gap-4 grid-cols-1 md:grid-cols-3">
+            {/* mt-4 grid gap-4 grid-cols-1 md:grid-cols-3 */}
+            <section className="mt-4 flex flex-wrap align-top gap-4 w-full">
                 {projects &&
                     projects.map((project: any, i: number) => (
                         <React.Fragment key={i}>
@@ -110,6 +112,7 @@ const page = () => {
                                 name={project.name}
                                 img={project.img}
                                 tech={project.tech}
+                                link={project.link}
                             />
                         </React.Fragment>
                     ))}

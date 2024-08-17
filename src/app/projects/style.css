@@ -1,22 +1,20 @@
 .cardShow {
     animation-name: show;
     animation-duration: 0.3s;
+
     animation-fill-mode: forwards;
-    display: block;
 }
 
 .cardHide {
     animation-name: hide;
     animation-duration: 0.3s;
+
     animation-fill-mode: forwards;
-    display: none;
 }
 
-/* @keyframes show {
+@keyframes show {
     0% {
         display: block;
-    }
-    1% {
         scale: 0;
         opacity: 0;
     }
@@ -31,11 +29,9 @@
         scale: 1;
         opacity: 1;
     }
-    99% {
+    100% {
         scale: 0;
         opacity: 0;
-    }
-    100% {
         display: none;
     }
-} */
+}

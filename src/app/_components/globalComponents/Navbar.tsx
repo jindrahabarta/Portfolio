@@ -3,7 +3,7 @@ import Lenis from 'lenis'
 import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import useAnimation from '@/app/_utils/useAnimation'
-import useMobileMenu from '@/app/_utils/useMobileMenu'
+import MobileMenu from '@/app/_utils/MobileMenu'
 import Link from 'next/link'
 import Plus from '@/app/_icons/Plus'
 
@@ -20,7 +20,7 @@ const Navbar = () => {
 
     const openMenu = () => {
         setIsOpened((prev) => !prev)
-        useMobileMenu(!isOpened)
+        MobileMenu(!isOpened)
     }
 
     useEffect(() => {

@@ -1,7 +1,7 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-const useScrollTrigger = (path) => {
+const ScrollTriggerInit = (path) => {
     ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
     gsap.registerPlugin(ScrollTrigger)
 
@@ -142,4 +142,4 @@ const useScrollTrigger = (path) => {
     // }
 }
 
-export default useScrollTrigger
+export default ScrollTriggerInit

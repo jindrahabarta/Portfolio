@@ -2,7 +2,7 @@
 import Lenis from 'lenis'
 import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import useAnimation from '@/app/_utils/useAnimation'
+import AnimationInit from '@/app/_utils/AnimationInit'
 import MobileMenu from '@/app/_utils/MobileMenu'
 import Link from 'next/link'
 import Plus from '@/app/_icons/Plus'
@@ -32,7 +32,7 @@ const Navbar = () => {
         }
         requestAnimationFrame(raf)
 
-        useAnimation(path)
+        AnimationInit(path)
     }, [path])
 
     const router = useRouter()

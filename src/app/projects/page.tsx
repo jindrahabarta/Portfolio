@@ -49,7 +49,7 @@ const projects: {
     },
 ]
 
-const page = () => {
+const Projects = () => {
     const [selectedBtn, setSelectedBtn] = useState('all')
 
     const find = (tech: string, e: any) => {
@@ -121,4 +121,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Projects

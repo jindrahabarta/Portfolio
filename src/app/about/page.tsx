@@ -3,7 +3,7 @@ import AboutMe from '../_components/aboutPage/AboutMe'
 
 import Skills from '../_components/aboutPage/Skills'
 
-const page = () => {
+const About = () => {
     return (
         <main>
             <AboutMe></AboutMe>
@@ -44,4 +44,4 @@ const page = () => {
     )
 }
 
-export default page
+export default About

@@ -1,7 +1,7 @@
 import gsap from 'gsap'
-import useScrollTrigger from './useScrollTrigger'
+import ScrollTriggerInit from './ScrollTriggerInit'
 
-const useAnimation = (path) => {
+const AnimationInit = (path) => {
     const firstLoad = gsap.timeline()
     firstLoad.set('.navLi', {
         autoAlpha: 1,
@@ -45,7 +45,7 @@ const useAnimation = (path) => {
                 opacity: 1,
                 stagger: 0.1,
                 onComplete: function () {
-                    useScrollTrigger(path)
+                    ScrollTriggerInit(path)
                     document
                         .getElementsByTagName('body')[0]
                         .classList.remove('offScroll')
@@ -55,8 +55,8 @@ const useAnimation = (path) => {
                 },
             })
     } else {
-        useScrollTrigger(path)
+        ScrollTriggerInit(path)
     }
 }
 
-export default useAnimation
+export default AnimationInit

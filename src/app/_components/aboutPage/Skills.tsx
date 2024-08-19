@@ -80,6 +80,8 @@ const Skills = () => {
                 </div>
             </SkillBox>
 
+            {/* <div className="col-span-3 row-span-3 bg-red-200"></div> */}
+
             <SkillBox cols={3} rows={3} className="flex flex-col gap-2">
                 <h2 className="text-darkBlue text-xl  font-bold underline">
                     O mně:

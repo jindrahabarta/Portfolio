@@ -31,7 +31,7 @@ const cards = [
     {
         src: '/videos/gsap_cover2.mp4',
         name: 'Gsap',
-        tags: [{ color: 'green', text: 'gsap' }, { text: 'dev' }],
+        tags: [{ color: 'green', text: 'gsap' }],
         link: 'https://jh-gsap.netlify.app',
     },
 ]

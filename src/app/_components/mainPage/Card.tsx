@@ -40,7 +40,7 @@ const Card = ({
                     {children}
                 </div>
 
-                <Link target="_blank" href={link}>
+                <Link target="_blank" rel="noopener noreferrer" href={link}>
                     <Tag
                         type="projectname"
                         className="absolute bottom-4 left-4 sm:opacity-80 sm:group-hover/card:opacity-100"

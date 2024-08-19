@@ -31,6 +31,7 @@ const Footer = () => {
                 <div className="flex gap-4 sm:gap-10">
                     <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://www.instagram.com/jindrahabarta"
                         className="flex items-end justify-start h-10 w-14  gap-0 hover:cursor-pointer hover:gap-1 duration-200 select-none group"
                     >
@@ -44,6 +45,7 @@ const Footer = () => {
                     </a>
                     <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://www.facebook.com/profile.php?id=100004816807190"
                         className="flex items-end h-10 w-14  gap-0  hover:cursor-pointer hover:gap-1 duration-200 select-none group"
                     >

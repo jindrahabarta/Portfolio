@@ -94,6 +94,7 @@ const Skills = () => {
                     <a
                         href="https://www.vsps-su.cz/"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="text-darkBlue font-bold"
                     >
                         VOŠ a SPŠ Šumperk
@@ -106,6 +107,7 @@ const Skills = () => {
                     <a
                         href="https://www.cvvoda.cz/"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="text-darkBlue font-bold"
                     >
                         ZŠ Červená Voda
@@ -179,6 +181,7 @@ const Skills = () => {
                         className="text-midBlue2 hover:text-midBlue text-lg lg:text-xl duration-200 font-bold"
                         href="https://www.instagram.com/jindrahabarta"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Instagram
                     </a>
@@ -186,6 +189,7 @@ const Skills = () => {
                         className="text-midBlue2 hover:text-midBlue text-lg lg:text-xl duration-200 font-bold"
                         href="https://www.facebook.com/profile.php?id=100004816807190"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Facebook
                     </a>
@@ -193,6 +197,7 @@ const Skills = () => {
                         className="text-midBlue2 hover:text-midBlue text-lg lg:text-xl duration-200 font-bold"
                         href="https://github.com/jindrahabarta?tab=repositories"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Github
                     </a>
@@ -242,6 +247,7 @@ const Skills = () => {
                     <a
                         className="text-red-500 hover:text-midBlue2 duration-200 "
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://www.instagram.com/drippy_rugs"
                     >
                         drippy_rugs

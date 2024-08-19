@@ -18,6 +18,7 @@ const ProjectCard = ({
         <Link
             href={link}
             target="_blank"
+            rel="noopener noreferrer"
             className={`relative overflow-hidden rounded-2xl w-full md:w-[calc(33%-0.56rem)] lg:w-[calc(33%-0.5rem)] xl:w-[calc(33%-0.45rem)] aspect-[16/9] bg-white bg-opacity-50 group/img hover:cursor-pointer ${tech} projectCard`}
         >
             <Image

@@ -71,13 +71,13 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="flex items-center gap-4">
-                    <Link
-                        href="https://jindrahabarta.netlify.app/CV_JindrichHabarta.pdf"
+                    <a
+                        href="./CV_JindrichHabarta.pdf"
                         download
                         className="darkBlueText hover:text-lightBlue duration-200 navLi opacity-0"
                     >
                         Download CV
-                    </Link>
+                    </a>
 
                     <button
                         className="w-fit h-fit block md:hidden z-50 navLi opacity-0"

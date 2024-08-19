@@ -44,6 +44,7 @@ const Skills = () => {
             href: '',
             ico: <Firebase></Firebase>,
         },
+
         {
             href: '',
             ico: <Illustrator></Illustrator>,
@@ -173,21 +174,24 @@ const Skills = () => {
                 <div className="mt-2 h-full flex flex-col gap-2">
                     <a
                         className="text-midBlue2 hover:text-midBlue text-lg lg:text-xl duration-200 font-bold"
-                        href=""
+                        href="https://www.instagram.com/jindrahabarta"
+                        target="_blank"
                     >
                         Instagram
                     </a>
                     <a
                         className="text-midBlue2 hover:text-midBlue text-lg lg:text-xl duration-200 font-bold"
-                        href=""
+                        href="https://www.facebook.com/profile.php?id=100004816807190"
+                        target="_blank"
                     >
                         Facebook
                     </a>
                     <a
                         className="text-midBlue2 hover:text-midBlue text-lg lg:text-xl duration-200 font-bold"
-                        href=""
+                        href="https://github.com/jindrahabarta?tab=repositories"
+                        target="_blank"
                     >
-                        Instagram
+                        Github
                     </a>
                 </div>
             </SkillBox>
@@ -242,12 +246,6 @@ const Skills = () => {
                     , běhání, tvorba webů, střih videí, kytara
                 </p>
             </SkillBox>
-
-            {/* <div className=" col-span-2 row-span-2  bg-lightBlue"></div> */}
-            {/* <div className=" col-span-3 row-span-3 bg-lightBlue"></div> */}
-            {/* <div className=" col-span-2 row-span-2 aspect-square  bg-lightBlue"></div> */}
-            {/* <div className=" col-span-2 row-span-1  bg-lightBlue"></div> */}
-            {/* <div className=" col-span-1 row-span-1  bg-lightBlue"></div> */}
         </section>
     )
 }

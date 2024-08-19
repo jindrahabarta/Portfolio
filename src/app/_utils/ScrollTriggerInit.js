@@ -6,7 +6,7 @@ const ScrollTriggerInit = (path) => {
     gsap.registerPlugin(ScrollTrigger)
 
     let mm = gsap.matchMedia()
-    console.log(path)
+
     if (path === '/') {
         //HERO
         gsap.to('.heroText', {
@@ -100,13 +100,6 @@ const ScrollTriggerInit = (path) => {
         })
     }
 
-    // gsap.to(".div", {
-    //     scrollTrigger:{
-    //         scroller: "#projectsContainer",
-    //         trigger: ".section-02",
-    //     }
-    // })
-
     //FOOTER
 
     mm.add('(min-width: 640px)', () => {
@@ -134,12 +127,6 @@ const ScrollTriggerInit = (path) => {
             borderRadius: 40,
         })
     })
-
-    // if (ScrollTrigger.isInViewport('.card', 0.5, true)) {
-    //     gsap.to('.card', {
-    //         opacity: 1,
-    //     })
-    // }
 }
 
 export default ScrollTriggerInit

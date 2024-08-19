@@ -1,6 +1,6 @@
 'use client'
 import Lenis from 'lenis'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import AnimationInit from '@/app/_utils/AnimationInit'
 import MobileMenu from '@/app/_utils/MobileMenu'
@@ -35,17 +35,18 @@ const Navbar = () => {
         AnimationInit(path)
     }, [path])
 
-    const router = useRouter()
-    const [isLoading, setIsLoading] = useState(false)
-    const linkMe = (to: string) => {
-        setIsLoading(true)
-        setTimeout(() => {
-            router.push(to)
-        }, 1000)
-        setTimeout(() => {
-            setIsLoading(false)
-        }, 1500)
-    }
+    //LOADER
+    // const router = useRouter()
+    // const [isLoading, setIsLoading] = useState(false)
+    // const linkMe = (to: string) => {
+    //     setIsLoading(true)
+    //     setTimeout(() => {
+    //         router.push(to)
+    //     }, 1000)
+    //     setTimeout(() => {
+    //         setIsLoading(false)
+    //     }, 1500)
+    // }
     return (
         <nav className="w-full fixed top-0 left-0 flex flex-col justify-end px-4 z-50">
             <div className="bg-midBlue2 h-0.5 mt-2 z-50"></div>
@@ -71,11 +72,13 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center gap-4">
                     <Link
-                        href="#"
+                        href="https://jindrahabarta.netlify.app/CV_JindrichHabarta.pdf"
+                        download
                         className="darkBlueText hover:text-lightBlue duration-200 navLi opacity-0"
                     >
                         Download CV
                     </Link>
+
                     <button
                         className="w-fit h-fit block md:hidden z-50 navLi opacity-0"
                         onClick={openMenu}

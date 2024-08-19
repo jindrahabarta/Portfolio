@@ -5,7 +5,7 @@ import AboutMeImg from '../../../../public/images/aboutme.png'
 const AboutMe = () => {
     return (
         <section className="flex md:flex-row flex-col h-screen justify-center items-center px-4 md:px-20 ">
-            <div className="flex-3">
+            <div className="flex-3 aboutMe opacity-0">
                 <Image
                     src={AboutMeImg}
                     width={500}
@@ -15,7 +15,7 @@ const AboutMe = () => {
                 ></Image>
             </div>
 
-            <p className="flex-5 text-xl sm:text-2xl md:text-3xl font-medium">
+            <p className="flex-5 text-xl sm:text-2xl md:text-3xl font-medium aboutMe opacity-0">
                 Ahoj, <br />
                 jsem absolventem IT oboru Střední průmyslové školy v Šumperku.
                 Na tomto oboru mě nejvíce zaujala tvorba webů a aplikací nebo

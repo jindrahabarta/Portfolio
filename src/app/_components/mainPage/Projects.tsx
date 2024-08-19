@@ -8,7 +8,7 @@ const cards = [
         src: '/videos/minigames_cover.mp4',
         name: 'Minigames',
         tags: [{ color: 'yellow', text: 'javascript' }, { text: 'gaming' }],
-        link: '/projects',
+        link: 'https://jh-games.netlify.app',
     },
     {
         src: '/videos/facebookv2_cover.mp4',
@@ -17,7 +17,7 @@ const cards = [
             { color: 'violet', text: 'firebase' },
             { color: 'yellow', text: 'javascript' },
         ],
-        link: '/projects',
+        link: 'https://jh-socialnetwork.netlify.app',
     },
     {
         src: '/videos/blog_cover.mp4',
@@ -26,13 +26,13 @@ const cards = [
             { color: 'yellow', text: 'javascript' },
             { text: 'firebase', color: 'violet' },
         ],
-        link: '/projects',
+        link: 'https://jindrahabarta-blog.netlify.app',
     },
     {
         src: '/videos/gsap_cover2.mp4',
         name: 'Gsap',
         tags: [{ color: 'green', text: 'gsap' }, { text: 'dev' }],
-        link: '/projects',
+        link: 'https://jh-gsap.netlify.app',
     },
 ]
 
@@ -74,7 +74,7 @@ const Projects = () => {
                                 <Card
                                     name={card.name}
                                     src={card.src}
-                                    link={'xd'}
+                                    link={card.link}
                                 >
                                     {card.tags.map((tag, i) => (
                                         <React.Fragment key={i}>

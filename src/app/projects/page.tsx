@@ -20,7 +20,7 @@ const projects: {
         name: 'Minigames',
         img: minigames,
         tech: 'next',
-        link: 'minigames',
+        link: 'https://jh-games.netlify.app',
     },
 
     {
@@ -39,13 +39,13 @@ const projects: {
         name: 'Facebook v2.0',
         img: facebookv2,
         tech: 'next',
-        link: 'facebook',
+        link: 'https://jh-socialnetwork.netlify.app',
     },
     {
         name: 'GSAP',
         img: gsap,
         tech: 'next',
-        link: 'xdxd',
+        link: 'https://jh-gsap.netlify.app',
     },
 ]
 
@@ -73,9 +73,6 @@ const Projects = () => {
             }
         }
     }
-
-    const { tech }: any = projects && projects
-    console.log(tech)
 
     return (
         <main className="p-4 mt-32 px-4">

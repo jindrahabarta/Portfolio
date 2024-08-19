@@ -12,7 +12,7 @@ const Checklist = () => {
                 text="Tvořit nové originální věci"
                 checked={1}
             ></ChecklistItem>
-            <ChecklistItem text="Zkusit digitální nomádství"></ChecklistItem>
+            <ChecklistItem text="Zkusit remote job"></ChecklistItem>
             <ChecklistItem text="Procestovat kus světa"></ChecklistItem>
 
             <ChecklistItem text="Jednou vydělat 100k měsíčně :D"></ChecklistItem>

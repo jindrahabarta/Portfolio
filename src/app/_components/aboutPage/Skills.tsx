@@ -9,7 +9,6 @@ import JS from '@/app/about/_icons/JS'
 import Next from '@/app/about/_icons/Next'
 import Tailwind from '@/app/about/_icons/Tailwind'
 import Illustrator from '@/app/about/_icons/Illustrator'
-import GSAP from '@/app/about/_icons/GSAP'
 import Photoshop from '@/app/about/_icons/Photoshop'
 import AE from '@/app/about/_icons/AE'
 import Checklist from './Checklist'
@@ -61,6 +60,8 @@ const Skills = () => {
 
     return (
         <section className="mt-10 flex flex-col md:grid md:grid-cols-5 md:grid-rows-5 gap-4 px-4 lg:px-20 ">
+            {/* <div className="bg-red-300 col-span-2 row-span-2"></div> */}
+
             <SkillBox cols={2} rows={2} square>
                 <h2 className="text-darkBlue text-xl font-bold underline">
                     Dovednosti:

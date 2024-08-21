@@ -34,7 +34,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <h1 className="font-bold text-center text-darkPink leading-none  text-[22vw] indent-[-2.8%] heroText opacity-0">
+            <h1 className="font-bold text-center text-darkPink leading-none indent-[-2.8%] heroText opacity-0">
                 Portfolio
             </h1>
         </section>

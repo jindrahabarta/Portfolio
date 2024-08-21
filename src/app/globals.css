@@ -42,3 +42,10 @@
         font-weight: 500;
     }
 }
+
+.heroText {
+    font-size: 22vw;
+    @media screen and (min-width: 1920px) {
+        font-size: 28rem;
+    }
+}

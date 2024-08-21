@@ -39,7 +39,7 @@ const cards = [
 const Projects = () => {
     return (
         <section
-            className={`${'md:h-[500vh]'} h-fit  relative mt-28 px-4 md:px-0`}
+            className={`${'md:h-[500vh]'} h-fit relative mt-28 px-4 md:px-0`}
             id="projectsContainer"
         >
             <div className="relative md:sticky top-0 left-0">
@@ -66,7 +66,7 @@ const Projects = () => {
 
                 <div className="overflow-x-hidden">
                     <div
-                        className={`w-full md:w-fit md:h-screen flex flex-col gap-4 md:gap-0 md:flex-row`}
+                        className={`w-full md:w-[400%] md:h-screen flex flex-col gap-4 md:gap-0 md:flex-row`}
                         id="sliderBlock"
                     >
                         {cards.map((card) => (

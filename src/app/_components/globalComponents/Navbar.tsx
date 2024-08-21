@@ -94,7 +94,7 @@ const Navbar = () => {
 
             {/* Mobile Nav */}
             <div
-                className={`px-4 py-32 block md:hidden absolute top-0 left-0 w-full h-screen backdrop-blur-md bg-[radial-gradient(169.40%_89.55%_at_94.76%_6.29%,rgba(0,0,0,0.40)_0%,rgba(255,255,255,0.00)_100%)]  z-40 duration-200 mobileMenu opacity-0 ${
+                className={`px-4 py-32 block md:hidden absolute top-0 left-0 w-full h-[100lvh] backdrop-blur-md bg-[radial-gradient(169.40%_89.55%_at_94.76%_6.29%,rgba(0,0,0,0.40)_0%,rgba(255,255,255,0.00)_100%)]  z-40 duration-200 mobileMenu opacity-0 ${
                     !isOpened && 'pointer-events-none'
                 }`}
             >

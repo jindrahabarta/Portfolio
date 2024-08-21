@@ -14,7 +14,7 @@ const Card = ({
     link: string
 }) => {
     return (
-        <div className="w-full md:w-screen md:h-screen flex items-center justify-center">
+        <div className="w-full md:w-1/4 md:h-screen flex items-center justify-center">
             <div className="group/card rounded-3xl aspect-[16/9]  md:h-fit w-full md:w-[50%] relative bg-opacity-30 overflow-hidden">
                 {/* <Image
                     className="w-full h-full object-cover "

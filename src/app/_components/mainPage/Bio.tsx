@@ -72,7 +72,7 @@ const Bio = () => {
                     <Link href="about">
                         <Tag
                             type="projectname"
-                            text="Více o mě"
+                            text="Více o mně"
                             className="mt-10"
                         />
                     </Link>

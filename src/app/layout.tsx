@@ -16,8 +16,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-    title: 'Jindřich Habarta - Portfolio',
-    description: 'This app is made for my portfolio',
+    title: 'Portfolio - Jindřich Habarta',
+    description: 'This website is made for presentation of my work.',
 }
 
 export default function RootLayout({

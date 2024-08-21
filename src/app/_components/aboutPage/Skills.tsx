@@ -14,47 +14,45 @@ import AE from '@/app/about/_icons/AE'
 import Checklist from './Checklist'
 
 const Skills = () => {
-    const icons: { href: string; ico: React.ReactElement }[] = [
+    const icons: { ico: JSX.Element; link?: string }[] = [
         {
-            href: '',
             ico: <HTML></HTML>,
+            link: 'https://html.com/',
         },
         {
-            href: '',
             ico: <CSS></CSS>,
         },
         {
-            href: '',
             ico: <JS></JS>,
         },
         {
-            href: '',
             ico: <ReactIco></ReactIco>,
+            link: 'https://react.dev/',
         },
         {
-            href: '',
             ico: <Next></Next>,
+            link: 'https://nextjs.org/',
         },
         {
-            href: '',
             ico: <Tailwind></Tailwind>,
+            link: 'https://tailwindcss.com/',
         },
         {
-            href: '',
             ico: <Firebase></Firebase>,
+            link: 'https://firebase.google.com/?hl=en&authuser=0',
         },
 
         {
-            href: '',
             ico: <Illustrator></Illustrator>,
+            link: 'https://www.adobe.com/cz/products/illustrator.html',
         },
         {
-            href: '',
             ico: <Photoshop></Photoshop>,
+            link: 'https://www.adobe.com/cz/products/photoshop.html',
         },
         {
-            href: '',
             ico: <AE></AE>,
+            link: 'https://www.adobe.com/cz/products/aftereffects.html?gclid=Cj0KCQjw2ou2BhCCARIsANAwM2H_gLGyCeiGqV1AaOJ03DI2SKITS_1Pizv86Dqxz7c9OjD1QUyUKbEaAtCxEALw_wcB&skwcid=AL!3085!3!601095134302!e!!g!!after%20effects&mv=search&mv2=paidsearch&sdid=G85SYKHF&ef_id=Cj0KCQjw2ou2BhCCARIsANAwM2H_gLGyCeiGqV1AaOJ03DI2SKITS_1Pizv86Dqxz7c9OjD1QUyUKbEaAtCxEALw_wcB:G:s&s_kwcid=AL!3085!3!601095134302!e!!g!!after%20effects!1473547901!57445685672&gad_source=1',
         },
     ]
 
@@ -70,7 +68,9 @@ const Skills = () => {
                 <div className="grid grid-cols-6  gap-3 mt-2">
                     {icons.map((ico, i) => (
                         <Link
-                            href={ico.href}
+                            href={ico.link ? ico.link : ''}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             key={i}
                             className="w-full h-full rounded-lg bg-[#9cbfff] p-1 hover:cursor-pointer duration-200 bg-opacity-0 hover:bg-opacity-100"
                         >
@@ -230,7 +230,9 @@ const Skills = () => {
                     </a>
                     <a
                         className="text-midBlue2 hover:text-midBlue text-xl duration-200 font-bold"
-                        href="tel:775180052"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="./CV_JindrichHabarta.pdf"
                     >
                         CV
                     </a>
@@ -252,7 +254,7 @@ const Skills = () => {
                     >
                         drippy_rugs
                     </a>
-                    , běhání, tvorba webů, střih videí, kytara
+                    , běh, tvorba webů, střih videí, kytara
                 </p>
             </SkillBox>
         </section>

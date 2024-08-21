@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="md:flex gap-24 lg:gap-44 mb-20 heroDisapear">
                 <div className="heroInfo opacity-0">
                     <p className="darkBlueText">
-                        Junior
+                        Wannabe Junior
                         <br />
                         Frontend developer
                     </p>

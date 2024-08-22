@@ -5,6 +5,7 @@ import facebookv2 from '@/../public/images/project/facebookv2.jpg'
 import gsap from '@/../public/images/project/gsap.jpg'
 import helenpottery from '@/../public/images/project/helenpottery.jpg'
 import minigames from '@/../public/images/project/minigames.jpg'
+import shoppingList from '@/../public/images/project/shopping_list_cover.png'
 import './style.css'
 import { StaticImageData } from 'next/image'
 import MenuButton from './MenuButton'
@@ -46,6 +47,12 @@ const projects: {
         img: gsap,
         tech: 'next',
         link: 'https://jh-gsap.netlify.app',
+    },
+    {
+        name: 'Shopping list',
+        img: shoppingList,
+        tech: 'next',
+        link: 'https://jh-shopping.netlify.app/',
     },
 ]
 

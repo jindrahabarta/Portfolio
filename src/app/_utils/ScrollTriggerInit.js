@@ -76,7 +76,7 @@ const ScrollTriggerInit = (path) => {
                     end: 'bottom bottom',
                     scrub: true,
                     snap: {
-                        snapTo: 0.25,
+                        snapTo: 0.2,
                         duration: 0.25,
                         delay: 0,
                         ease: 'power1.inOut',

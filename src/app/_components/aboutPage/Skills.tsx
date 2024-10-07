@@ -67,7 +67,7 @@ const Skills = () => {
 
   return (
     <section className="mt-10 flex flex-col md:grid md:grid-cols-5 md:grid-rows-5 gap-4 px-4 lg:px-20 ">
-      <SkillBox cols={2} rows={2} square>
+      <SkillBox className="col-span-2 row-span-2" cols={2} rows={2} square>
         <h2 className="text-darkBlue text-xl font-bold underline">
           Dovednosti:
         </h2>

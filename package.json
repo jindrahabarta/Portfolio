@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "gsap": "^3.12.5",
+    "i18next": "^25.3.2",
     "lenis": "^1.1.9",
-    "next": "14.2.5",
+    "next": "^14.2.30",
     "react": "^18",
     "react-dom": "^18",
-    "react-fitty": "^1.0.1"
+    "react-fitty": "^1.0.1",
+    "react-i18next": "^15.6.1"
   },
   "devDependencies": {
     "@types/node": "^20",

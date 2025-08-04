@@ -13,7 +13,7 @@ const Footer = () => {
                 id="footer-top"
             >
                 <a
-                    href="tel:775180052"
+                    href="mailto:jindriskuv@email.cz"
                     className={`px-10 py-2 w-fit rounded-3xl hover:cursor-pointer duration-200 group
                     bg-darkBlue hover:bg-darkBlue`}
                 >
@@ -60,7 +60,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="w-full h-[15vh] bg-darkPink flex items-end justify-center text-xs p-2">
+            <div className="w-[90%] sm:w-[80%] h-[15vh] bg-darkPink flex items-end justify-center text-xs p-2 rounded-t-3xl">
                 <p className=" text-darkBlue">© 2024 JINDRICH HABARTA</p>
             </div>
         </footer>

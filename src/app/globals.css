@@ -3,49 +3,66 @@
 @tailwind utilities;
 
 * {
-    font-family: var(--font-poppins);
-    color: white;
+  font-family: var(--font-poppins);
+  color: white;
+}
+/*LENIS*/
+
+html.lenis,
+html.lenis body {
+  height: auto;
 }
 
 .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
 
 .offScroll {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 .darkBlueText,
 .lightBlueText {
-    color: #5d8eff;
-    font-size: 0.8rem;
-    line-height: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
+  color: #5d8eff;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .lightBlueText {
-    color: #acc9ff;
+  color: #acc9ff;
 }
 .darkBlueText {
-    color: #5d8eff;
+  color: #5d8eff;
 }
 
 @media (min-width: 400px) {
-    .darkBlueText,
-    .lightBlueText {
-        font-size: 1rem;
-        line-height: 1.75rem;
-        text-transform: uppercase;
-        font-weight: 500;
-    }
+  .darkBlueText,
+  .lightBlueText {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 }
 
 .heroText {
-    font-size: 22vw;
-    @media screen and (min-width: 1920px) {
-        font-size: 28rem;
-    }
+  font-size: 22vw;
+  @media screen and (min-width: 1920px) {
+    font-size: 28rem;
+  }
 }

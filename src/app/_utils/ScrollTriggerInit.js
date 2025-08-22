@@ -98,6 +98,20 @@ const ScrollTriggerInit = (path) => {
                 })
             )
         })
+    } else if (path === '/about') {
+
+        gsap.to('.aboutHeroSpan', {
+            scrollTrigger: {
+                trigger: '#aboutHeroText',
+                start: 'top 30%',
+                end: 'bottom 30%',
+                markers: true,
+                scrub: 1
+            },
+            stagger: 0.08,
+            opacity: 100,
+        })
+
     }
 
     //FOOTER

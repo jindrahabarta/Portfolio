@@ -12,11 +12,14 @@ const Checklist = () => {
                 text="Tvořit nové originální věci"
                 checked={1}
             ></ChecklistItem>
-            <ChecklistItem text="Zkusit remote job"></ChecklistItem>
+            <ChecklistItem checked={1} text="Zaběhnout půlmaraton ( 1:35 )"></ChecklistItem>
+
+            <ChecklistItem text="Maraton"></ChecklistItem>
+
+            <ChecklistItem text="Remote job"></ChecklistItem>
             <ChecklistItem text="Procestovat kus světa"></ChecklistItem>
 
             <ChecklistItem text="Jednou vydělat 100k měsíčně :D"></ChecklistItem>
-            <ChecklistItem text="Zaběhnout půlmaraton"></ChecklistItem>
             <ChecklistItem text="Nikdy se nepřestat vzdělávat"></ChecklistItem>
         </ul>
     )

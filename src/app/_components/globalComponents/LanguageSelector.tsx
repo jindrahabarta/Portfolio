@@ -1,5 +1,4 @@
 import Chevron from '@/app/_icons/Chevron'
-import CZ from '@/app/_icons/flags/CZ'
 import React, { useState } from 'react'
 
 const LanguageSelector = () => {
@@ -7,7 +6,7 @@ const LanguageSelector = () => {
     const [isOpened, setIsOpened] = useState(false)
 
     return (
-        <div onMouseLeave={() => setIsOpened(false)} className='relative navLi stroke-midBlue2 hover:stroke-lightBlue duration-200 select-none'>
+        <div onMouseLeave={() => setIsOpened(false)} className='relative navLi stroke-midBlue2 hover:stroke-lightBlue duration-200 select-none opacity-0'>
             <div
                 onClick={() => setIsOpened((prev) => !prev)}
                 className='flex items-center cursor-pointer'>

@@ -165,9 +165,6 @@ const Skills = () => {
           <li>
             <p className="text-darkBlue">- Pracovní nasazení</p>
           </li>
-          <li>
-            <p className="text-darkBlue">- Správa sociálních sítí</p>
-          </li>
         </ul>
       </SkillBox>
 
@@ -244,14 +241,14 @@ const Skills = () => {
         <p className="mt-2 text-lg text-darkBlue">
           Cestování,{" "}
           <a
-            className="text-red-500 hover:text-midBlue2 duration-200 "
+            className="text-darkPink hover:text-midBlue2 duration-200 "
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.instagram.com/drippy_rugs"
           >
             drippy_rugs
           </a>
-          , běh, tvorba webů, střih videí, kytara
+          , běh, tvorba webů, střih videí, kytara, čtení
         </p>
       </SkillBox>
     </section>

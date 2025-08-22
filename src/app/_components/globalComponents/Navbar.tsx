@@ -84,6 +84,7 @@ const Navbar = () => {
           >
             Download CV
           </a>
+
           <LanguageSelector></LanguageSelector>
 
           <button

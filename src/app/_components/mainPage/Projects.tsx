@@ -47,11 +47,11 @@ const Projects = () => {
 
     return (
         <section className={`h-fit relative mt-28 px-4`}>
-            <h1 className='text-midBlue2 text-4xl font-bold text-center'>
+            <h1 className='text-midBlue2 text-3xl md:text-4xl font-bold text-center'>
                 Project list
             </h1>
 
-            <div className='grid grid-cols-12'>
+            <div className='grid grid-cols-6 md:grid-cols-12 mt-8'>
                 <h2 className='darkBlueText'>Index</h2>
                 <h2 className='darkBlueText'>Project</h2>
             </div>
@@ -97,7 +97,7 @@ const Projects = () => {
                                         hoveredProject !== i
                                             ? 'opacity-50'
                                             : 'opacity-100'
-                                    } grid grid-cols-4 w-1/3 duration-200 py-2`}
+                                    } grid grid-cols-2 md:grid-cols-4 w-1/3 duration-200 py-2`}
                                 >
                                     <p
                                         className={`${
@@ -118,7 +118,7 @@ const Projects = () => {
                                     </div>
                                 </div>
 
-                                <div className='flex gap-3'>
+                                <div className='hidden md:flex gap-3'>
                                     {project.tags.map((tag, i) => (
                                         <Tag
                                             key={i}
@@ -135,10 +135,10 @@ const Projects = () => {
             </ul>
 
             {projectCount < Data.length - 1 && (
-                <div className='flex justify-center'>
+                <div className='flex justify-center mt-4'>
                     <button
                         onClick={() => setProjectCount((prev) => prev + 5)}
-                        className='border-2 border-midBlue2 rounded-full py-2 px-6 font-bold text-midBlue2 hover:bg-midBlue2 hover:text-white duration-200  hover:shadow-md hover:shadow-midBlue2'
+                        className='border-2 border-midBlue2 rounded-full py-2 px-6 text-sm md:text-base font-bold text-midBlue2 hover:bg-midBlue2 hover:text-white duration-200  hover:shadow-md hover:shadow-midBlue2'
                     >
                         Více projektů
                     </button>

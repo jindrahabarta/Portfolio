@@ -6,7 +6,7 @@ const Tag = ({
     text,
     className,
 }: {
-    type: string
+    type: 'tag' | 'projectname'
     color?: string
     text: string
     className?: string
@@ -22,7 +22,7 @@ const Tag = ({
                    ${color === 'blue' && 'bg-darkBlue hover:bg-midBlue'}
               `}
             >
-                <p className="text-white text-sm">{text}</p>
+                <p className='text-white text-sm'>{text}</p>
             </div>
         )
     } else if (type === 'projectname') {
@@ -32,7 +32,7 @@ const Tag = ({
 bg-darkPink hover:bg-midBlue
 `}
             >
-                <p className="text-darkBlue group-hover:text-lightBlue duration-200 font-bold">
+                <p className='text-darkBlue group-hover:text-lightBlue duration-200 font-bold'>
                     {text}
                 </p>
             </div>

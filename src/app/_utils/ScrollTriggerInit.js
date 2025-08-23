@@ -66,37 +66,10 @@ const ScrollTriggerInit = (path) => {
             })
         })
 
-        const projectsTl = gsap.timeline()
+      
 
         mm.add('(min-width: 768px)', () => {
-            ScrollTrigger.create(
-                {
-                    trigger: '#projectsContainer',
-                    start: 'top top',
-                    end: 'bottom bottom',
-                    scrub: true,
-                    snap: {
-                        snapTo: 0.2,
-                        duration: 0.25,
-                        delay: 0,
-                        ease: 'power1.inOut',
-                    },
-
-                    onUpdate: (self) => {
-                        const x = self.progress * -100
-                        const y = self.progress * 100
-                        gsap.to('#sliderBlock', {
-                            translateX: x + '%',
-                        })
-                        gsap.to('.projectsText', {
-                            translateX: y - 5 + '%',
-                        })
-                    },
-                },
-                projectsTl.to('.projectsText', {
-                    opacity: 0.25,
-                })
-            )
+         
         })
     } else if (path === '/about') {
 

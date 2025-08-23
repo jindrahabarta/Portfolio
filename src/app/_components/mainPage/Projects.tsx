@@ -1,104 +1,151 @@
-"use client";
-import React from "react";
-import Card from "./Card";
-import Tag from "../globalComponents/Tag";
-
-const cards = [
-  {
-    src: "/videos/minigames_cover.mp4",
-    name: "Minigames",
-    tags: [{ color: "yellow", text: "javascript" }, { text: "gaming" }],
-    link: "https://jh-games.netlify.app",
-  },
-  {
-    src: "/videos/facebookv2_cover.mp4",
-    name: "Facebook v2.0",
-    tags: [
-      { color: "violet", text: "firebase" },
-      { color: "yellow", text: "javascript" },
-    ],
-    link: "https://jh-socialnetwork.netlify.app",
-  },
-  {
-    src: "/videos/blog_cover.mp4",
-    name: "Blog",
-    tags: [
-      { color: "yellow", text: "javascript" },
-      { text: "firebase", color: "violet" },
-    ],
-    link: "https://jindrahabarta-blog.netlify.app",
-  },
-  {
-    src: "/videos/admin_cover.mp4",
-    name: "Admin app",
-    tags: [
-      { color: "green", text: "mongoDb" },
-      { color: "yellow", text: "express.js" },
-    ],
-    link: "https://jh-adminapp.netlify.app",
-  },
-  {
-    src: "/videos/shopping_list_cover.mp4",
-    name: "Shopping List",
-    tags: [{ color: "violet", text: "firebase" }, { text: "shopping" }],
-    link: "https://jh-shopping.netlify.app",
-  },
-];
+'use client'
+import React, { useRef, useState } from 'react'
+import Tag from '../globalComponents/Tag'
+import Link from 'next/link'
+import gsap from 'gsap'
+import Image from 'next/image'
+import { Projects as Data } from '@/app/data/Projects'
 
 const Projects = () => {
-  return (
-    <section
-      className={`${"md:h-[600vh]"} h-fit relative mt-28 px-4 md:px-0`}
-      id="projectsContainer"
-    >
-      <div className="relative md:sticky top-0 left-0">
-        <div className="absolute top-0 right-0 h-screen w-fit gap-4 flex items-center opacity-0 projectsText">
-          <a
-            href="/projects"
-            className="font-bold text-[25vw] text-center text-nowrap text-white hover:text-midBlue2 duration-200"
-          >
-            All Projects
-          </a>
-          <div className="font-bold text-[25vw] text-center text-white ">
-            Projects
-          </div>
-          <div className="font-bold text-[25vw] text-center text-white ">
-            Projects
-          </div>
-          <div className="font-bold text-[25vw] text-center text-white ">
-            Projects
-          </div>
-          <div className="font-bold text-[25vw] text-center text-white ">
-            Projects
-          </div>
-        </div>
+    const [hoveredProject, setHoveredProject] = useState<null | number>(null)
+    const listRef = useRef<HTMLUListElement>(null)
+    const modalRef = useRef<HTMLDivElement>(null)
+    const [projectCount, setProjectCount] = useState(8)
 
-        <div className="overflow-x-hidden">
-          <div
-            className={`w-full md:w-[500%] md:h-screen flex flex-col gap-4 md:gap-0 md:flex-row`}
-            id="sliderBlock"
-          >
-            {cards.map((card) => (
-              <React.Fragment key={card.name}>
-                <Card name={card.name} src={card.src} link={card.link}>
-                  {card.tags.map((tag, i) => (
-                    <React.Fragment key={i}>
-                      <Tag
-                        color={tag.color}
-                        type="tag"
-                        text={tag.text}
-                        className="sm:opacity-80 sm:group-hover/card:opacity-100"
-                      />
-                    </React.Fragment>
-                  ))}
-                </Card>
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+    const mouseOver = (i: number) => {
+        setHoveredProject(i)
 
-export default Projects;
+        gsap.fromTo(
+            '.projectModal',
+            {
+                opacity: 0,
+                scale: 0,
+            },
+            {
+                opacity: 0.9,
+                scale: 1,
+                duration: 0.5,
+            }
+        )
+    }
+
+    const mouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        if (!listRef.current || !modalRef.current) return
+
+        const boundingBox = listRef.current.getBoundingClientRect()
+        const currentLi = e.currentTarget.getBoundingClientRect()
+
+        gsap.set('.projectModal', {
+            x: e.clientX,
+            y:
+                currentLi.y -
+                boundingBox.top -
+                modalRef.current.clientHeight / 2 +
+                currentLi.height / 2,
+        })
+    }
+
+    return (
+        <section className={`h-fit relative mt-28 px-4`}>
+            <h1 className='text-midBlue2 text-4xl font-bold text-center'>
+                Project list
+            </h1>
+
+            <div className='grid grid-cols-12'>
+                <h2 className='darkBlueText'>Index</h2>
+                <h2 className='darkBlueText'>Project</h2>
+            </div>
+
+            <div className='h-0.5 w-full bg-midBlue2'></div>
+
+            <ul ref={listRef} className='w-full relative'>
+                <div
+                    ref={modalRef}
+                    className={`${
+                        hoveredProject !== null ? 'block' : 'hidden'
+                    } projectModal absolute aspect-video h-40 w-auto opcity-100 rounded-2xl overflow-hidden `}
+                >
+                    {hoveredProject !== null && (
+                        <Image
+                            src={Data[hoveredProject].src}
+                            alt={Data[hoveredProject].name}
+                            width={500}
+                            height={500}
+                            className='w-full h-full object-cover'
+                        ></Image>
+                    )}
+                </div>
+
+                {Data.slice(0, projectCount).map((project, i) => {
+                    return (
+                        <li
+                            key={i}
+                            id={i.toString()}
+                            className='w-full cursor-pointer'
+                        >
+                            <Link
+                                href={project.link}
+                                target='_blank'
+                                className='w-full flex items-center justify-between relative'
+                            >
+                                <div
+                                    onMouseEnter={() => mouseOver(i)}
+                                    onMouseMove={(e) => mouseMove(e)}
+                                    onMouseLeave={() => setHoveredProject(null)}
+                                    className={`${
+                                        hoveredProject !== null &&
+                                        hoveredProject !== i
+                                            ? 'opacity-50'
+                                            : 'opacity-100'
+                                    } grid grid-cols-4 w-1/3 duration-200 py-2`}
+                                >
+                                    <p
+                                        className={`${
+                                            hoveredProject === i &&
+                                            'text-midBlue2'
+                                        } duration-200 text-midBlue2 `}
+                                    >
+                                        {i < 9 ? `0${i + 1}` : i + 1}
+                                    </p>
+
+                                    <div
+                                        className={`${
+                                            hoveredProject === i &&
+                                            'text-midBlue2'
+                                        } font-bold text-midBlue2 text-nowrap duration-200`}
+                                    >
+                                        {project.name}
+                                    </div>
+                                </div>
+
+                                <div className='flex gap-3'>
+                                    {project.tags.map((tag, i) => (
+                                        <Tag
+                                            key={i}
+                                            type={'tag'}
+                                            text={tag.text}
+                                            color={tag.color}
+                                        ></Tag>
+                                    ))}
+                                </div>
+                            </Link>
+                        </li>
+                    )
+                })}
+            </ul>
+
+            {projectCount < Data.length - 1 && (
+                <div className='flex justify-center'>
+                    <button
+                        onClick={() => setProjectCount((prev) => prev + 5)}
+                        className='border-2 border-midBlue2 rounded-full py-2 px-6 font-bold text-midBlue2 hover:bg-midBlue2 hover:text-white duration-200  hover:shadow-md hover:shadow-midBlue2'
+                    >
+                        Více projektů
+                    </button>
+                </div>
+            )}
+        </section>
+    )
+}
+
+export default Projects

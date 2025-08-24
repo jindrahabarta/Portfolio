@@ -6,16 +6,36 @@ export const Projects =[
       { color: 'yellow', text: 'javascript' },
     ],
     tech: 'next',
-    link: 'https://jh-todoapp.netlify.app',
+    link: 'https://motionlabs.cz/',
+  },
+  {
+    src: '/images/project/Printujto.webp',
+    name: 'Printujto',
+    tags: [
+      { color: 'yellow', text: 'javascript' },
+    ],
+    tech: 'next',
+    link: 'https://printujto.cz/',
+  },
+   {
+    
+    src: '/images/project/admin.jpg',
+    name: 'Admin',
+    tags: [
+      { color: 'violet', text: 'firebase' },
+      { color: 'yellow', text: 'javascript' },
+    ],
+    tech: 'react',
+    link: 'https://jh-adminapp.netlify.app',
   },
     {
-    src: '/images/project/todo.jpg',
+    src: '/images/project/ocni-latalova.webp',
     name: 'Ocni Latalova',
     tags: [
       { color: 'yellow', text: 'javascript' },
     ],
     tech: 'next',
-    link: 'https://jh-todoapp.netlify.app',
+    link: 'https://ocnilatalova.netlify.app/',
   },
   {
     src: '/images/project/SolariumAvantgarda.webp',
@@ -24,7 +44,7 @@ export const Projects =[
       { color: 'yellow', text: 'javascript' },
     ],
     tech: 'next',
-    link: 'https://jh-todoapp.netlify.app',
+    link: 'https://solariumolomouc.cz/',
   },
    {
     src: '/images/project/3dmodelcalculator.webp',
@@ -34,16 +54,7 @@ export const Projects =[
       { color: 'green', text: 'express.js' },
     ],
     tech: 'react',
-    link: 'https://jh-todoapp.netlify.app',
-  },
-   {
-    src: '/images/project/Printujto.webp',
-    name: 'Printujto',
-    tags: [
-      { color: 'yellow', text: 'javascript' },
-    ],
-    tech: 'next',
-    link: 'https://jh-todoapp.netlify.app',
+    link: 'https://3dmodelcalculator.netlify.app/',
   },
   {
     src: '/images/project/todo.jpg',
@@ -54,17 +65,6 @@ export const Projects =[
     ],
     tech: 'react',
     link: 'https://jh-todoapp.netlify.app',
-  },
-  {
-    
-    src: '/images/project/admin.jpg',
-    name: 'Admin',
-    tags: [
-      { color: 'violet', text: 'firebase' },
-      { color: 'yellow', text: 'javascript' },
-    ],
-    tech: 'react',
-    link: 'https://jh-adminapp.netlify.app',
   },
   {
     

@@ -23,6 +23,8 @@ const Navbar = () => {
     const openMenu = () => {
         setIsOpened((prev) => !prev)
         MobileMenu(!isOpened)
+
+        isOpened ? lenis.current?.start() : lenis.current?.stop()
     }
 
     useEffect(() => {
@@ -36,13 +38,6 @@ const Navbar = () => {
         }
         requestAnimationFrame(raf)
 
-        lenis.current.scrollTo(0, {
-            onComplete: () => {
-                if (!lenis.current) return
-                lenis.current.stop()
-            },
-        })
-
         AnimationInit(path, lenis.current)
     }, [path])
 
@@ -50,6 +45,8 @@ const Navbar = () => {
         e.preventDefault()
 
         lenis.current?.scrollTo(link)
+        lenis.current?.start()
+
         MobileMenu(false)
     }
 

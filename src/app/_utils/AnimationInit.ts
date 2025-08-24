@@ -11,8 +11,10 @@ const AnimationInit = (path:string, lenis:Lenis) => {
         stagger: 0.1,
     })
 
+    
     if (path === '/') {
-      
+        
+        lenis.scrollTo(0, {onComplete:()=>lenis.stop()})
         //navBar
         firstLoad
             .set('.navLi', {
@@ -48,10 +50,8 @@ const AnimationInit = (path:string, lenis:Lenis) => {
                 stagger: 0.1,
                 onComplete: function () {
                     ScrollTriggerInit(path)
+                    lenis.start()
 
-                    lenis?.start()
-
-                    
                 },
             })
     } else if (path === '/about') {

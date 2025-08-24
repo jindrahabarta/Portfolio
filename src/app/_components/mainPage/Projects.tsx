@@ -112,7 +112,7 @@ const Projects = () => {
                                         className={`${
                                             hoveredProject === i &&
                                             'text-midBlue2'
-                                        } font-bold text-midBlue2 text-nowrap duration-200`}
+                                        } font-bold text-midBlue2 text-nowrap duration-200 w-full`}
                                     >
                                         {project.name}
                                     </div>

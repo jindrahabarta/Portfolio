@@ -28,11 +28,11 @@ const Tag = ({
     } else if (type === 'projectname') {
         return (
             <div
-                className={`${className} w-fit px-10 py-2 rounded-3xl hover:cursor-pointer duration-200 group
+                className={`${className} w-fit px-4 sm:px-10 py-2 rounded-full hover:cursor-pointer duration-200 group
 bg-darkPink hover:bg-midBlue
 `}
             >
-                <p className='text-darkBlue group-hover:text-lightBlue duration-200 font-bold'>
+                <p className='text-darkBlue group-hover:text-lightBlue duration-200 font-bold text-xs sm:text-base'>
                     {text}
                 </p>
             </div>

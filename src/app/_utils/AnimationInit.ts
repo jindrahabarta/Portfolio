@@ -1,7 +1,10 @@
 import gsap from 'gsap'
 import ScrollTriggerInit from './ScrollTriggerInit'
+import Lenis from 'lenis'
 
-const AnimationInit = (path) => {
+
+
+const AnimationInit = (path:string, lenis:Lenis) => {
     const firstLoad = gsap.timeline()
     firstLoad.set('.navLi', {
         autoAlpha: 1,
@@ -9,8 +12,7 @@ const AnimationInit = (path) => {
     })
 
     if (path === '/') {
-        document.getElementsByTagName('body')[0].classList.add('offScroll')
-        document.getElementsByTagName('html')[0].classList.add('offScroll')
+      
         //navBar
         firstLoad
             .set('.navLi', {
@@ -46,12 +48,10 @@ const AnimationInit = (path) => {
                 stagger: 0.1,
                 onComplete: function () {
                     ScrollTriggerInit(path)
-                    document
-                        .getElementsByTagName('body')[0]
-                        .classList.remove('offScroll')
-                    document
-                        .getElementsByTagName('html')[0]
-                        .classList.remove('offScroll')
+
+                    lenis?.start()
+
+                    
                 },
             })
     } else if (path === '/about') {

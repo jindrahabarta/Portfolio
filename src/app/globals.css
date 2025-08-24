@@ -28,11 +28,6 @@ html.lenis body {
   pointer-events: none;
 }
 
-.offScroll {
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
-}
 
 .darkBlueText,
 .lightBlueText {

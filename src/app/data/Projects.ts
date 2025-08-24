@@ -1,4 +1,13 @@
 export const Projects =[
+  {
+    src: '/images/project/MotionLabs.webp',
+    name: 'Motion Labs',
+    tags: [
+      { color: 'yellow', text: 'javascript' },
+    ],
+    tech: 'next',
+    link: 'https://jh-todoapp.netlify.app',
+  },
     {
     src: '/images/project/todo.jpg',
     name: 'Ocni Latalova',
@@ -9,16 +18,7 @@ export const Projects =[
     link: 'https://jh-todoapp.netlify.app',
   },
   {
-    src: '/images/project/todo.jpg',
-    name: 'Motion Labs',
-    tags: [
-      { color: 'yellow', text: 'javascript' },
-    ],
-    tech: 'next',
-    link: 'https://jh-todoapp.netlify.app',
-  },
-  {
-    src: '/images/project/todo.jpg',
+    src: '/images/project/SolariumAvantgarda.webp',
     name: 'Solarium Olomouc',
     tags: [
       { color: 'yellow', text: 'javascript' },
@@ -27,7 +27,7 @@ export const Projects =[
     link: 'https://jh-todoapp.netlify.app',
   },
    {
-    src: '/images/project/todo.jpg',
+    src: '/images/project/3dmodelcalculator.webp',
     name: '3D Model Calculator',
     tags: [
       { color: 'yellow', text: 'javascript' },
@@ -37,7 +37,7 @@ export const Projects =[
     link: 'https://jh-todoapp.netlify.app',
   },
    {
-    src: '/images/project/todo.jpg',
+    src: '/images/project/Printujto.webp',
     name: 'Printujto',
     tags: [
       { color: 'yellow', text: 'javascript' },
@@ -57,7 +57,7 @@ export const Projects =[
   },
   {
     
-    src: '/images/project/todo.jpg',
+    src: '/images/project/admin.jpg',
     name: 'Admin',
     tags: [
       { color: 'violet', text: 'firebase' },
@@ -68,7 +68,7 @@ export const Projects =[
   },
   {
     
-    src: '/images/project/todo.jpg',
+    src: '/images/project/minigames.jpg',
     name: 'Minigames',
     tags: [
       { color: 'violet', text: 'firebase' },
@@ -79,7 +79,7 @@ export const Projects =[
   },
   {
     
-    src: '/images/project/todo.jpg',
+    src: '/images/project/helenpottery.jpg',
     name: 'Helenpottery',
     tags: [
       { color: 'violet', text: 'firebase' },
@@ -90,7 +90,7 @@ export const Projects =[
   },
   {
     
-    src: '/images/project/todo.jpg',
+    src: '/images/project/blog.jpg',
     name: 'Blog',
     tags: [
       { color: 'violet', text: 'firebase' },
@@ -101,7 +101,7 @@ export const Projects =[
   },
   {
     
-    src: '/images/project/todo.jpg',
+    src: '/images/project/facebookv2.jpg',
     name: 'Facebook v2.0',
     tags: [
       { color: 'violet', text: 'firebase' },
@@ -112,18 +112,7 @@ export const Projects =[
   },
   {
     
-    src: '/images/project/todo.jpg',
-    name: 'GSAP',
-    tags: [
-      { color: 'violet', text: 'firebase' },
-      { color: 'yellow', text: 'javascript' },
-    ],
-    tech: 'next',
-    link: 'https://jh-gsap.netlify.app',
-  },
-  {
-    
-    src: '/images/project/todo.jpg',
+    src: '/images/project/shopping_list_cover.png',
     name: 'Shopping list',
     tags: [
       { color: 'violet', text: 'firebase' },

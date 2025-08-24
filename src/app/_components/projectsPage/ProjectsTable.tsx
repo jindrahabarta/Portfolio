@@ -34,8 +34,8 @@ const Projects = () => {
     }
 
     return (
-        <section>
-            <div className='flex gap-4'>
+        <section className='mt-24 md:mt-32'>
+            <div className='flex flex-wrap gap-4'>
                 <MenuButton
                     isSelected={selectedBtn}
                     id='all'

@@ -78,7 +78,6 @@ const ScrollTriggerInit = (path) => {
                 trigger: '#aboutHeroText',
                 start: 'top 30%',
                 end: 'bottom 30%',
-                markers: true,
                 scrub: 1
             },
             stagger: 0.08,

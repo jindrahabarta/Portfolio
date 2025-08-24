@@ -9,7 +9,10 @@ export const metadata: Metadata = {
 
 const Projects = () => {
     return (
-        <main className="p-4 mt-32 px-4">
+        <main className='p-4 mt-32 px-4'>
+            <h1 className='font-bold text-center text-midBlue leading-none indent-[-2%] heroText'>
+                Projects
+            </h1>
             <ProjectsTable></ProjectsTable>
         </main>
     )
